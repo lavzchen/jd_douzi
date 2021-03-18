@@ -230,10 +230,10 @@ def pushplus(title, content):
     print("PushPlus推送启动")
     if PUSH_PLUS_USER:
         response = requests.post(
-            f"http://pushplus.hxtrip.com/send?token={PUSH_PLUS_TOKEN}&title={title}&content={content}&template=html&topic={PUSH_PLUS_USER}").json()
+            f"http://www.pushplus.plus/send?token={PUSH_PLUS_TOKEN}&title={title}&content={content}&template=html&topic={PUSH_PLUS_USER}").json()
     else:
         response = requests.post(
-            f"http://pushplus.hxtrip.com/send?token={PUSH_PLUS_TOKEN}&title={title}&content={content}&template=html").json()
+            f"http://www.pushplus.plus/send?token={PUSH_PLUS_TOKEN}&title={title}&content={content}&template=html").json()
     if response['code'] == 200:
         print('推送成功！')
     else:
